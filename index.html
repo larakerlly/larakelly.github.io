@@ -1,74 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Larakerlly | Cartão Digital</title>
-    <style>
-      body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f5f3ff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lara Kerlly</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
 
-      .card {
-        background-color: white;
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(106, 13, 173, 0.15);
-        text-align: center;
-        width: 90%;
-        max-width: 340px;
-      }
+    .card {
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+      animation: fadeInUp 1.2s ease;
+    }
 
-      .logo {
-        font-size: 40px;
-        color: #6a0dad;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
+    .initials {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff90e8;
+      margin-bottom: 0.5rem;
+    }
 
-      h1 {
-        margin: 0;
-        font-size: 24px;
-        color: #333;
-      }
+    .name {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
 
-      p {
-        margin-top: 8px;
-        color: #555;
-      }
+    .role {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
 
-      a {
-        color: white;
-        background-color: #6a0dad;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px 20px;
-        border-radius: 10px;
-        margin: 8px;
-        display: inline-block;
-        transition: background-color 0.3s ease;
-      }
+    .links a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #ff90e8;
+      font-weight: bold;
+    }
 
-      a:hover {
-        background-color: #4b0082;
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      animation: bounce 2s infinite;
+      color: #ff90e8;
+      font-size: 1.5rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
       }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <div class="logo">LK</div>
-      <h1>Lara Kerlly</h1>
-      <p>Desenvolvedora Front-End</p>
-      <div>
-        <a href="https://linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a>
-        <a href="https://github.com/larakerlly" target="_blank">GitHub</a>
-      </div>
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="initials">LK</div>
+    <div class="name">Lara Kerlly</div>
+    <div class="role">Desenvolvedora Front-End</div>
+    <div class="links">
+      <a href="https://linkedin.com/in/seu-link" target="_blank">LinkedIn</a>
+      <a href="https://github.com/seu-user" target="_blank">GitHub</a>
     </div>
-  </body>
+  </div>
+  <div class="scroll-down">⬇️</div>
+</body>
 </html>
